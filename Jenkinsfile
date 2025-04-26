@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Installing backend dependencies...'
                 dir('backend') {
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'Starting backend server...'
                 dir('backend') {
-                    sh 'npm start &'
+                    bat 'start npm start'
                 }
             }
         }
