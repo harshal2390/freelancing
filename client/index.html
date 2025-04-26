@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>freelancing</title>
+</head>
+
+<body>
+    <h1>Frontend Page</h1>
+    <button onclick="fetchData()">Get Backend Message</button>
+    <p id="message"></p>
+
+    <script>
+        function fetchData() {
+            fetch('http://localhost:5000/api')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('message').innerText = data.message;
+                });
+        }
+    </script>
+</body>
+
+</html>
