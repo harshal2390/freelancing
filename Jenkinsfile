@@ -12,7 +12,7 @@ pipeline {
         stage('Install Backend Dependencies') {
             steps {
                 echo 'Installing backend dependencies...'
-                dir('backend') {
+                dir('server') {
                     bat 'npm install'
                 }
             }
@@ -21,7 +21,7 @@ pipeline {
         stage('Run Backend Server') {
             steps {
                 echo 'Starting backend server...'
-                dir('backend') {
+                dir('server') {
                     bat 'start npm start'
                 }
             }
